@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bumptech.glide.Glide;
 import com.geekcamp.lesson31.App;
 import com.geekcamp.lesson31.R;
 import com.geekcamp.lesson31.data.models.Film;
@@ -69,5 +70,6 @@ public class FilmDetailFragment extends Fragment {
         binding.filmReleaseDate.setText(film.getReleaseDate());
         binding.filmProducer.setText(film.getProducer());
         binding.filmRunningTime.setText(film.getRunningTime());
+        Glide.with(this).load(film.getImage()).into(binding.filmImage);
        }
 }

@@ -9,6 +9,8 @@ public class Film implements Serializable {
     private  String id;
     private  String title;
 
+    private  String image;
+
     @SerializedName("original_title")
     private  String originalTitle;
 
@@ -40,6 +42,14 @@ public class Film implements Serializable {
 
     public void setProducer(String producer) {
         this.producer = producer;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public Film(String id, String title, String originalTitle,
